@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aplikasi Absensi</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>📋 Aplikasi Absensi</h1>
+    <input type="text" id="nama" placeholder="Masukkan Nama Siswa">
+    <select id="status">
+      <option value="Hadir">Hadir</option>
+      <option value="Alfa">Alfa</option>
+      <option value="Sakit">Sakit</option>
+      <option value="Izin">Izin</option>
+      <option value="Bolos">Bolos</option>
+    </select>
+    <button onclick="tambahAbsensi()">Catat Absensi</button>
+    <button class="export-btn" onclick="exportExcel()">Export ke Excel</button>
+
+    <table>
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>Nama</th>
+          <th>Waktu</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody id="daftarAbsensi">
+      </tbody>
+    </table>
+  </div>
+  <script src="js/app.js"></script>
+</body>
+</html>
